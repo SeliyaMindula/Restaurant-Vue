@@ -1,0 +1,72 @@
+{
+  "users": [
+    {
+      "id": "8094",
+      "name": "kasun",
+      "email": "kasun@gmail.com",
+      "password": "kasun123"
+    },
+    {
+      "id": "f7ea",
+      "name": "seliya",
+      "email": "seliya@gmail.com",
+      "password": "seliya123"
+    },
+    {
+      "id": "c600",
+      "name": "sss",
+      "email": "ssss",
+      "password": "sss"
+    },
+    {
+      "id": "ba43",
+      "name": "nimal",
+      "email": "nimal@gmail.com",
+      "password": "nimal123"
+    },
+    {
+      "id": "ca14",
+      "name": "kavidu",
+      "email": "kavidu@gmail.com",
+      "password": "kavidu123"
+    },
+    {
+      "id": "5bb8",
+      "name": "sahan",
+      "email": "sahan@gmail.com",
+      "password": "sahan123"
+    },
+    {
+      "id": "c6dc",
+      "name": "seliya",
+      "email": "seliya@gmail.com",
+      "password": "seliya123"
+    }
+  ],
+  "restuarent": [
+    {
+      "name": "Buerger queen",
+      "address": "palatuwa, matara gg",
+      "contact": 111111,
+      "id": "1"
+    },
+    {
+      "id": "4",
+      "name": "mr koththu",
+      "contact": "0713565885",
+      "address": "Colombo"
+    },
+    {
+      "id": "1cb2",
+      "name": "dddd",
+      "address": "ddd",
+      "contact": "ff"
+    },
+    {
+      "name": "dakshinda",
+      "address": "\"Kusuma\" ",
+      "contact": "ff",
+      "id": "4808"
+    }
+  ]
+}
