@@ -2,7 +2,7 @@
   <Header />
   <h1>Hello {{ name }},Welcome Our Home Page</h1>
 
-  <table border="1">
+  <table>
     <tr>
       <th>ID</th>
       <th>Name</th>
@@ -17,8 +17,8 @@
       <td>{{ item.address }}</td>
       <td>
         <!-- <router-link :to="'/Update/' + item.id">Update</router-link> -->
-        <button v-on:click="updateResto(item.id)">Update</button>
-        <button v-on:click="deleteResto(item.id)">Delete</button>
+        <button class="button" v-on:click="updateResto(item.id)">Update</button>
+        <button class="button" v-on:click="deleteResto(item.id)">Delete</button>
       </td>
     </tr>
   </table>
@@ -70,14 +70,65 @@ export default {
 </script>
 
 <style>
-table {
+table,td,th {
+  border: 1px solid;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid rgb(197, 47, 135);
+  border: 2px solid rgb(197, 47, 135);
+  border-collapse:collapse;
 }
-td,
-th {
+
+td,th {
   width: 160px;
   height: 40px;
 }
+/* .button{
+  color: rgb(255, 255, 255);
+  background-color: rgb(197, 47, 135);
+  border: none;
+  padding: 5px;
+  margin: 2px 5px;
+}
+
+.button:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(243, 53, 161);
+} */
+
+.button {
+  background: rgb(197, 47, 135);
+  border: 1px solid rgb(197, 47, 135);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  outline: 0;
+  padding: 6px;
+  margin: 2px 5px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button:hover,
+.button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: rgb(197, 47, 135);
+}
+
+.button:active {
+  opacity: .5;
+}
 </style>
+
+<!-- HTML !-->
+<button class="button-24" role="button">Button 24</button>
+
