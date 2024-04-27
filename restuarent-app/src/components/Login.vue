@@ -5,7 +5,8 @@
     <input type="text" v-model="email" placeholder="Enter Email" />
     <input type="password" v-model="password" placeholder="Enter Password" />
     <button v-on:click="login">Login</button>
-    <p>
+    <p class="h3">
+      Create a new account?
       <router-link to="/SignUp">Sign Up</router-link>
     </p>
   </div>
@@ -24,32 +25,37 @@ export default {
   },
 
   methods: {
+
     async login() {
       let result = await axios.get(
         `http://localhost:3000/users?email=${this.email}&password=${this.password}`
       );
 
+      if (!this.email || !this.password) {
+        alert("Please enter your email and password");
+        return;
+      }
+
       if (result.status == 200 && result.data.length == 1) {
-        alert("Login complete");
+        alert("Login successful");
         localStorage.setItem("user-info", JSON.stringify(result.data[0]));
         this.$router.push({ name: "Home-c" });
-      } else {
-        alert("Login error");
+      }
+      else {
+        alert("Invalid username or password");
       }
 
       console.warn(result);
       console.warn(this.email, this.password);
     },
   },
-  mounted()
-    {
-        let user = localStorage.getItem("user-info");
+  mounted() {
+    let user = localStorage.getItem("user-info");
 
-        if(user)
-        {
-            this.$router.push({name: 'Home-c'})
+    if (user) {
+      this.$router.push({ name: 'Home-c' })
 
-        }
     }
+  }
 };
 </script>

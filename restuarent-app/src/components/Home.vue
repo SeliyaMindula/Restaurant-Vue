@@ -53,10 +53,10 @@ export default {
     },
     async loadData() {
       let user = localStorage.getItem("user-info");
-      this.name = JSON.parse(user).name;
+      this.name = user ? JSON.parse(user).name :'';
 
       if (!user) {
-        this.$router.push({ name: "SignUp" });
+        this.$router.push({ name: "Login-c" });
       }
 
       let result = await axios.get("http://localhost:3000/restuarent");
@@ -95,6 +95,7 @@ td,th {
   background-color: rgb(243, 53, 161);
 } */
 
+
 .button {
   background: rgb(197, 47, 135);
   border: 1px solid rgb(197, 47, 135);
@@ -127,6 +128,13 @@ td,th {
 .button:active {
   opacity: .5;
 }
+
+.h3{
+  color: rgb(110, 110, 110);
+  font-weight: 300;
+  text-decoration: none;
+}
+
 </style>
 
 <!-- HTML !-->
